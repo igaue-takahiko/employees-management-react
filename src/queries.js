@@ -18,3 +18,34 @@ export const GET_TOKEN = gql`
         }
     }
 `;
+
+export const GET_EMPLOYEES = gql`
+    query {
+        allEmployees {
+            edges {
+                node {
+                    id
+                    name
+                    joinYear
+                    department {
+                        id
+                        deptName
+                    }
+                }
+            }
+        }
+    }
+`;
+
+export const GET_DEPARTMENTS = gql`
+    query {
+        allDepartments {
+            edges {
+                node {
+                    id
+                    deptName
+                }
+            }
+        }
+    }
+`;

@@ -1,0 +1,16 @@
+.mainPage {
+    margin: 50px;
+}
+
+.mainPage h1 {
+    font-size: 30px;
+}
+
+.mainPage__out {
+    margin-left: 20px;
+    /* font-size: 45px; */
+    color: dimgray;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
