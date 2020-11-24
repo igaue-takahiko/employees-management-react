@@ -1,0 +1,33 @@
+.employeeList__list {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.employeeList__title {
+    font-size: 25px;
+}
+
+.employeeList__item {
+    display: flex;
+    background: rgb(237, 238, 238);
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.employeeList__delete {
+    color: dimgray;
+    cursor: pointer;
+}
+
+.employeeList__edit {
+    color: dimgray;
+    cursor: pointer;
+}
+
+.employeeList__detail {
+    color: dimgray;
+    cursor: pointer;
+}

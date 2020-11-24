@@ -6,6 +6,7 @@ import { ExitToApp } from '@material-ui/icons';
 
 import styles from './MainPage.module.css';
 import { GET_EMPLOYEES, GET_DEPARTMENTS } from '../queries';
+import { EmployeeList, EmployeeCreate } from './employees';
 
 const MainPage = () => {
     const {
@@ -52,7 +53,17 @@ const MainPage = () => {
                     }}
                 />
             </h1>
-            <Grid container></Grid>
+            <div className="c-section-container">
+                <EmployeeCreate dataDepartments={dataDepartments} />
+            </div>
+            <div className="module-spacer--extra-extra-small"/>
+            <Grid container>
+                <Grid item xs={5}>
+                    <EmployeeList dataEmployees={dataEmployees} />
+                </Grid>
+                <Grid item xs={4}></Grid>
+                <Grid item xs={3}></Grid>
+            </Grid>
         </div>
     )
 }

@@ -49,3 +49,63 @@ export const GET_DEPARTMENTS = gql`
         }
     }
 `;
+
+export const CREATE_EMPLOYEE = gql`
+    mutation($name: String!, $joinYear: Int!, $department: ID!) {
+        createEmployee(
+            input: { name: $name, joinYear: $joinYear, department: $department }
+        ) {
+            employee {
+                id
+                name
+                joinYear
+                department {
+                    id
+                    deptName
+                }
+            }
+        }
+    }
+`;
+
+export const UPDATE_EMPLOYEE = gql`
+    mutation($id: ID!, $name: String!, $joinYear: Int!, $department: ID!) {
+        updateEmployee(
+            input: { id: $id, name: $name, joinYear: $joinYear, department: $department }
+        ) {
+            employee {
+                id
+                name
+                joinYear
+                department {
+                    id
+                    deptName
+                }
+            }
+        }
+    }
+`;
+
+export const DELETE_EMPLOYEE = gql`
+    mutation($id: ID!) {
+        deleteEmployee(input: { id: $id }) {
+            employee {
+                id
+            }
+        }
+    }
+`;
+
+export const GET_SINGLE_EMPLOYEE = gql`
+    query($id: ID!) {
+        employee(id: $id) {
+            id
+            name
+            joinYear
+            department {
+                id
+                deptName
+            }
+        }
+    }
+`;
