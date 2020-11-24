@@ -6,7 +6,7 @@ import { ExitToApp } from '@material-ui/icons';
 
 import styles from './MainPage.module.css';
 import { GET_EMPLOYEES, GET_DEPARTMENTS } from '../queries';
-import { EmployeeList, EmployeeCreate } from './employees';
+import { EmployeeList, EmployeeCreate, EmployeeDetails } from './employees';
 
 const MainPage = () => {
     const {
@@ -61,7 +61,9 @@ const MainPage = () => {
                 <Grid item xs={5}>
                     <EmployeeList dataEmployees={dataEmployees} />
                 </Grid>
-                <Grid item xs={4}></Grid>
+                <Grid item xs={4}>
+                    <EmployeeDetails />
+                </Grid>
                 <Grid item xs={3}></Grid>
             </Grid>
         </div>
