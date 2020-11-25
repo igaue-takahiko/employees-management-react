@@ -1,0 +1,27 @@
+.searchByAnd__searchIcon {
+    color: dimgray;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.searchByAnd__title {
+    font-size: 20px;
+}
+
+.searchByAnd__list {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.searchByAnd__item {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.searchByAnd__field {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}

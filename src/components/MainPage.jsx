@@ -8,6 +8,7 @@ import styles from './MainPage.module.css';
 import { GET_EMPLOYEES, GET_DEPARTMENTS } from '../queries';
 import { EmployeeList, EmployeeCreate, EmployeeDetails } from './employees';
 import { DepartmentList } from '../components/department';
+import { SearchByName, SearchByAnd } from '../components/search';
 
 const MainPage = () => {
     const {
@@ -68,6 +69,15 @@ const MainPage = () => {
                 <Grid item xs={3}>
                     <DepartmentList dataDepartments={dataDepartments} />
                 </Grid>
+            </Grid>
+            <Grid container>
+                <Grid item xs={2}>
+                    <SearchByName />
+                </Grid>
+                <Grid item xs={3}>
+                    <SearchByAnd />
+                </Grid>
+                <Grid item xs={7}></Grid>
             </Grid>
         </div>
     )

@@ -130,3 +130,43 @@ export const GET_SINGLE_EMPLOYEE = gql`
         }
     }
 `;
+
+export const SEARCH_EMPLOYEE = gql`
+    query($name: String) {
+        allEmployees(name_Icontains: $name) {
+            edges {
+                node {
+                    id
+                    name
+                    joinYear
+                    department {
+                        id
+                        deptName
+                    }
+                }
+            }
+        }
+    }
+`;
+
+export const SEARCH_AND_EMPLOYEE = gql`
+    query($name: String, $joinYear: Int, $dept: String) {
+        allEmployees(
+            name_Icontains: $name
+            joinYear: $joinYear
+            department_DeptName_Icontains: $dept
+        ) {
+            edges {
+                node {
+                    id
+                    name
+                    joinYear
+                    department {
+                        id
+                        deptName
+                    }
+                }
+            }
+        }
+    }
+`;
