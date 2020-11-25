@@ -37,6 +37,27 @@ export const GET_EMPLOYEES = gql`
     }
 `;
 
+export const CREATE_DEPARTMENT = gql`
+    mutation($deptName: String!) {
+        createDept(input: { deptName: $deptName }) {
+            department {
+                id
+                deptName
+            }
+        }
+    }
+`;
+
+export const DELETE_DEPARTMENT = gql`
+    mutation($id: ID!) {
+        deleteDept(input: { id: $id }) {
+            department {
+                id
+            }
+        }
+    }
+`;
+
 export const GET_DEPARTMENTS = gql`
     query {
         allDepartments {

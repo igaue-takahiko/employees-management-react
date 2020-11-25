@@ -1,0 +1,25 @@
+.deptList {
+    background: rgb(237, 238, 238);
+}
+
+.deptList__list {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.deptList__title {
+    font-size: 25px;
+}
+
+.deptList__item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+
+.deptList__delete {
+    color: dimgray;
+    cursor: pointer;
+}
