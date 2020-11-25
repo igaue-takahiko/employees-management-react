@@ -9,6 +9,7 @@ import { GET_EMPLOYEES, GET_DEPARTMENTS } from '../queries';
 import { EmployeeList, EmployeeCreate, EmployeeDetails } from './employees';
 import { DepartmentList } from '../components/department';
 import { SearchByName, SearchByAnd } from '../components/search';
+import { Pagination } from '../components/pagination';
 
 const MainPage = () => {
     const {
@@ -77,7 +78,9 @@ const MainPage = () => {
                 <Grid item xs={3}>
                     <SearchByAnd />
                 </Grid>
-                <Grid item xs={7}></Grid>
+                <Grid item xs={7}>
+                    <Pagination />
+                </Grid>
             </Grid>
         </div>
     )

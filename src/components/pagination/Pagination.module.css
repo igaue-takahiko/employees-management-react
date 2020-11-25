@@ -1,0 +1,18 @@
+.pagination__searchIcon {
+    margin-top: 10px;
+    color: dimgray;
+    cursor: pointer;
+}
+
+.pagination__list {
+    height: 300px;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.pagination__item {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
